@@ -13,7 +13,7 @@ public class TopicCluster {
     private Long num;
 
     @Basic(optional = false)
-    @Column(name = "name", nullable = false, unique = true, length = 255)
+    @Column(name = "name", nullable = false, length = 255)
     private String name;
 
     @Basic(optional = false)

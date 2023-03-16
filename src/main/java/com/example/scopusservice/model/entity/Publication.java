@@ -22,7 +22,7 @@ public class Publication {
     private Long id;
 
     @Basic(optional = false)
-    @Column(name = "name", nullable = false, length = 255)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "type", length = 255)
@@ -37,13 +37,13 @@ public class Publication {
     @Column(name = "pages_num")
     private Integer pagesNum;
 
-    @Column(name = "doi", unique = true, length = 255)
+    @Column(name = "doi", length = 255)
     private String doi;
 
     @Column(name = "eid", unique = true, length = 255)
     private String eid;
 
-    @Column(name = "pubmed_id", unique = true)
+    @Column(name = "pubmed_id")
     private Long pubmedId;
 
     @Column(name = "views_num")
@@ -55,7 +55,7 @@ public class Publication {
     @Column(name = "open_access", length = 255)
     private String openAccess;
 
-    @Column(name = "correspondence_address", length = 255)
+    @Column(name = "correspondence_address")
     private String correspondenceAddress;
 
     @Column(name = "date_year")

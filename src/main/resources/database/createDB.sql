@@ -96,18 +96,18 @@ CREATE TABLE "public"."organization" (
 -- Table Definition
 CREATE TABLE "public"."publication" (
     "id" int8 NOT NULL DEFAULT nextval('publication_id_seq'::regclass),
-    "name" varchar(255) NOT NULL,
+    "name" varchar NOT NULL,
     "type" varchar(255),
     "abstract" varchar,
     "english" bool,
     "pages_num" int4,
-    "doi" varchar(255) UNIQUE,
+    "doi" varchar(255),
     "eid" varchar(255) UNIQUE,
-    "pubmed_id" int8 UNIQUE,
+    "pubmed_id" int8,
     "views_num" int8,
     "citations_num" int8,
     "open_access" varchar(255),
-    "correspondence_address" varchar(255),
+    "correspondence_address" varchar,
     "date_year" int8,
     "topic_cluster_num" int8,
     "topic_num" int8,
@@ -185,7 +185,7 @@ CREATE TABLE "public"."source_metrics" (
 -- Table Definition
 CREATE TABLE "public"."topic" (
     "num" int8 NOT NULL,
-    "name" varchar(255) NOT NULL UNIQUE,
+    "name" varchar(255) NOT NULL,
     "prominence_percentile" float8 NOT NULL,
     PRIMARY KEY ("num")
 );
@@ -193,7 +193,7 @@ CREATE TABLE "public"."topic" (
 -- Table Definition
 CREATE TABLE "public"."topic_cluster" (
     "num" int8 NOT NULL,
-    "name" varchar(255) NOT NULL UNIQUE,
+    "name" varchar(255) NOT NULL,
     "prominence_percentile" float8 NOT NULL,
     PRIMARY KEY ("num")
 );
